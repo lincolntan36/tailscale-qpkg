@@ -27,7 +27,7 @@ set the environment variable `TSTAG` to the release number, e.g.
 3. Go to Tailscale package directory: `cd /share/CE_CACHEDEV1_DATA/.qpkg/Tailscale`
 4. Authorize your client: `./tailscale -socket var/run/tailscale/tailscaled.sock up`
 
-To run any of cli commands of tailscale you must put the `-socket var/run/tailscale/tailscaled.sock` argument after `./tailscale` otherwise an error will occur
+To run any of the cli commands of tailscale you must put the `-socket var/run/tailscale/tailscaled.sock` argument after `./tailscale` otherwise an error will occur
 (e.g. `./tailscale -socket var/run/tailscale/tailscaled.sock status`)
 
 To get an https certificate run the command `./tailscale -socket var/run/tailscale/tailscaled.sock cert` this would act the same way as `sudo tailscale cert` in linux distributions
