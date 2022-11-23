@@ -20,13 +20,14 @@ set the environment variable `TSTAG` to the release number, e.g.
 2. Open the Tailscale app and proceed with login.
 
 
-##CLI/SSH for configuration and set up
+##CLI/SSH for configuration and set up after instalation of qpkg 
 
 1. Login to your qnap with ssh
 2. Use the command `getcfg SHARE_DEF defVolMP -f /etc/config/def_share.info` to know where you have installed the app. (Its output should look like `/share/CE_CACHEDEV1_DATA/` or `/share/CACHEDEV1_DATA/`)
 3. Go to Tailscale package directory: `cd /share/CE_CACHEDEV1_DATA/.qpkg/Tailscale`
 4. Authorize your client: `./tailscale -socket var/run/tailscale/tailscaled.sock up`
 
+##Notes
 To run any of the cli commands of tailscale you must put the `-socket var/run/tailscale/tailscaled.sock` argument after `./tailscale` otherwise an error will occur
 (e.g. `./tailscale -socket var/run/tailscale/tailscaled.sock status`)
 
