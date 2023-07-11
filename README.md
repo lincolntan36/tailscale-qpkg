@@ -23,12 +23,12 @@ set the environment variable `TSTAG` to the release number, e.g.
 ##CLI/SSH for configuration and set up after instalation of qpkg (Use this if on older firmware [e.g. 5.0.0.1986] or if you prefer cli)
 
 1. Login to your qnap with ssh
-2. Use the command `getcfg SHARE_DEF defVolMP -f /etc/config/def_share.info` to know where you have installed the app. (Its output should look like `/share/CE_CACHEDEV1_DATA/` or `/share/CACHEDEV1_DATA/`)
-3. Go to Tailscale package directory: `cd /share/CE_CACHEDEV1_DATA/.qpkg/Tailscale`
+2. Use the command `getcfg SHARE_DEF defVolMP -f /etc/config/def_share.info` to know where you have installed the app. (Its output should look like `/share/CACHEDEV1_DATA/` or `/share/CACHEDEV1_DATA/`)
+3. Go to Tailscale package directory: `cd /share/CACHEDEV1_DATA/.qpkg/Tailscale`
 4. Authorize your client: `./tailscale up`
 
 ##Notes
-If the command won't run with `./tailscale` only, put `-socket var/run/tailscale/tailscaled.sock` argument after `./tailscale` (e.g. `./tailscale -socket var/run/tailscale/tailscaled.sock status`)
+If the command won't run with `./tailscale` only, put `-socket var/run/tailscale/tailscaled.sock` argument after `./tailscale` (e.g. `./tailscale --socket var/run/tailscale/tailscaled.sock status`)
 
 To get an https certificate run the command `./tailscale cert` this would act the same way as `sudo tailscale cert` in linux distributions
 
